@@ -74,44 +74,44 @@
 
 					<div class="mb-3">
 						<form action="dashboard" method="get">
-							<!-- btn btn-submit  -->
+							<!-- btn btn-submit -->
 							<!-- 원래 영어 단어: syringe catheter 3way non-drug painkillers Nonsteroidal Painkillers digestive organs Brain improvement Nervous Sanctions Allergic inhibitors electrolyte solution -->
-							<span class="fw-bold">분류</span>
+							<span class="fw-bold">분류 : </span>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
-								type="submit" name="subcategory" value="syringe">주사</button>
+								type="submit" name="subcategory" value="syringe">주사(${subMap.get("syringe")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
-								type="submit" name="subcategory" value="catheter">카테터</button>
+								type="submit" name="subcategory" value="catheter">카테터(${subMap.get("catheter")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
-								type="submit" name="subcategory" value="3way">3way</button>
+								type="submit" name="subcategory" value="3way">3way(${subMap.get("3way")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory" value="non-drug painkillers">비마약성
-								진통제</button>
+								진통제(${subMap.get("non-drug painkillers")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory"
-								value="Nonsteroidal Painkillers">비스테로이드성 진통제</button>
+								value="Nonsteroidal Painkillers">비스테로이드성 진통제(${subMap.get("Nonsteroidal Painkillers")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
-								type="submit" name="subcategory" value="digestive organs">소화기관 작용제</button>
+								type="submit" name="subcategory" value="digestive organs">소화기관 작용제(${subMap.get("digestive organs")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory" value="Brain improvement">뇌
-								기능 향상</button>
+								기능 향상(${subMap.get("Brain improvement")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory" value="Nervous Sanctions">신경
-								제재</button>
+								제재(${subMap.get("Nervous Sanctions")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory" value="Allergic inhibitors">알레르기
-								억제제</button>
+								억제제(${subMap.get("Allergic inhibitors")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
-								type="submit" name="subcategory" value="electrolyte solution">수액제재</button>
+								type="submit" name="subcategory" value="electrolyte solution">수액제재(${subMap.get("electrolyte solution")})</button>
 						</form>
 					</div>
 

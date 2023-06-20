@@ -15,6 +15,8 @@ public class SuppliesListVO {
 	
 	//출고 수량
 	private int quantity;
+	//카테고리 count
+	private int cnt;
 	
 	
 	public String getName() {
@@ -83,12 +85,18 @@ public class SuppliesListVO {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	public int getCnt() {
+		return cnt;
+	}
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
 	@Override
 	public String toString() {
 		return "SuppliesListVO [name=" + name + ", specifications=" + specifications + ", manufacturer=" + manufacturer
 				+ ", category=" + category + ", subcategory=" + subcategory + ", change_date=" + change_date
 				+ ", in_charge=" + in_charge + ", stock=" + stock + ", turnover_rate=" + turnover_rate + ", visible="
-				+ visible + ", quantity=" + quantity + "]";
+				+ visible + ", quantity=" + quantity + ", cnt=" + cnt + "]";
 	}
 	
 	

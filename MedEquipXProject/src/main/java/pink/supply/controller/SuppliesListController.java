@@ -29,7 +29,8 @@ public class SuppliesListController {
 	
 	
 	@GetMapping("dashboard")
-	public String dashboardPage(SuppliesListVO supList, Model model) {
+	public String dashboardPage(SuppliesListVO supList, Model model, SuppliesListVO getCnt) {
+		//재고조사
 		ArrayList<SuppliesListVO> supDatas = supplyServ.callSupplyList(supList);
 		String name = null;
 		int stock = 0;
@@ -54,15 +55,34 @@ public class SuppliesListController {
 		}
 		logger.info("call supDatas data is ={}", supDatas);
 		model.addAttribute("listCall", supplyServ.callSupplyList(supList));
+		
+		//카테고리 count
+		ArrayList<SuppliesListVO> getsubCnt = supplyServ.categoryCnt(getCnt);
+		HashMap<String, Integer> subMap = new HashMap<>();
+		for (SuppliesListVO supplies : getsubCnt) {
+			subMap.put(supplies.getSubcategory(), supplies.getCnt());
+		}
+		logger.info("subMap data is ={}", subMap.toString());
+		model.addAttribute("subMap", subMap);
 		return "dashboard";
 	}
 	
 	@GetMapping(value = "dashboard", params = "subcategory")
-	public String callDatasByCategory(@RequestParam("subcategory") String subcategory, Model model) {
+	public String callDatasByCategory(@RequestParam("subcategory") String subcategory, Model model, SuppliesListVO getCnt) {
+		//카테고리 count
+		ArrayList<SuppliesListVO> getsubCnt = supplyServ.categoryCnt(getCnt);
+		HashMap<String, Integer> subMap = new HashMap<>();
+		for (SuppliesListVO supplies : getsubCnt) {
+			subMap.put(supplies.getSubcategory(), supplies.getCnt());
+		}
+		logger.info("subMap data is ={}", subMap.toString());
+		model.addAttribute("subMap", subMap);
+		
 		logger.info("subcategory data is ={}", subcategory);
 		model.addAttribute("getCategory", supplyServ.selctCategory(subcategory));
 		return "dashboard";
 	}
+	
 	
 	@GetMapping("releasedItem")
 	public String releasedItem() {

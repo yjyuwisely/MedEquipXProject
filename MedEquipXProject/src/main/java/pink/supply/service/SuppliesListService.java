@@ -12,5 +12,6 @@ public interface SuppliesListService {
 	public SuppliesListVO callDataByQR(String name);
 	public void updateItem(SuppliesListVO supList);
 	public ArrayList<SuppliesListVO> selctCategory(String subcategory);
+	public ArrayList<SuppliesListVO> categoryCnt(SuppliesListVO getCnt);
 
 }

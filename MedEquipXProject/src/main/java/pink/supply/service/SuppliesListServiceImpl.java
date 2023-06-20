@@ -52,4 +52,10 @@ public class SuppliesListServiceImpl implements SuppliesListService {
 		return supplyMap.selctCategory(subcategory);
 	}
 
+
+	@Override
+	public ArrayList<SuppliesListVO> categoryCnt(SuppliesListVO getCnt) {
+		return supplyMap.categoryCnt(getCnt);
+	}
+
 }

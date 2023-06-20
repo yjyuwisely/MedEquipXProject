@@ -48,10 +48,10 @@ public class LoginController {
                 model.addAttribute("getName", memData);
                 logger.info("memData is {}.", memData);
 				return "redirect:/dashboard";
-            } else {//비번 틀렷을때
+            } else {
                 return "/LogIn";
             }
-        } else {// 일치하는 아이디가 존재하지 않을 시
+        } else {
         	return "/LogIn";
         }
 	}

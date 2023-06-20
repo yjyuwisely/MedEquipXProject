@@ -91,7 +91,7 @@
 										<h6><%=member.getName()%></h6>
 										<h5>Manager</h5>
 									</c:when>
-									<c:when test="${member.getDoctor() eq 'y'}">
+									<c:when test="${member.getDoctor() eq 'Y'}">
 										<h6><%=member.getName()%></h6>
 										<h5>Admin</h5>
 									</c:when>

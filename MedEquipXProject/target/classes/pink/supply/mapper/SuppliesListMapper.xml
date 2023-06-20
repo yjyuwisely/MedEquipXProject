@@ -104,4 +104,14 @@ WHERE
 	subcategory = #{subcategory}
 </select>
 
+<select id="categoryCnt" parameterType="pink.supply.model.SuppliesListVO" resultType="pink.supply.model.SuppliesListVO">
+SELECT 
+	subcategory
+	, COUNT(*) AS cnt
+FROM 
+	medical_supplies
+GROUP BY 
+	subcategory
+</select>
+
 </mapper>

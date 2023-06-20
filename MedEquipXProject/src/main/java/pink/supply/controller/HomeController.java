@@ -30,4 +30,7 @@ public class HomeController {
 		return "home";
 	}
 	
+	//프로젝트 대통합, 라이브러리 한글로 바꾸기, null값 insert금지
+	//신규등록 후에 업로드 완료 sweetalert2
+	
 }
