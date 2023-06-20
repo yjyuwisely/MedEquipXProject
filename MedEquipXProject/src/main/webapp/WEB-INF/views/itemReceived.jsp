@@ -62,13 +62,13 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 							</div>
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
-									<label>물품명</label> <input name="name" type="text"
+									<label>물품명</label> <input id="name" name="name" type="text"
 										class="inputStyle"> <!-- 물품명 -->
 								</div>
 							</div>
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
-									<label>분류</label> <input name="category" type="text"
+									<label>분류</label> <input id="specifications" name="category" type="text"
 										class="inputStyle">
 								</div>
 							</div>
@@ -119,5 +119,18 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 	<script src="resources/assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 	<script src="resources/assets/js/script.js"></script>
+	<c:if test="${not empty getQRDatas.name}">
+		<script>
+			let nameVal = document.getElementById('name').value = "${getQRDatas.name}";
+			let specificationsVal = document.getElementById('specifications').value = "${getQRDatas.specifications}";
+			let nameInput = document.getElementById('name');
+			let specificationsInput = document.getElementById('specifications');
+			
+			if(nameVal !== null && nameVal.trim() !== ''){
+				nameInput.readOnly = true;
+				specificationsInput.readOnly = true;
+			}
+		</script>				
+	</c:if>
 </body>
 </html>

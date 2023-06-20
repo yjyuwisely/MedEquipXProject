@@ -64,28 +64,28 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
 									<label>출고 부서</label> <input name="Department" type="text"
-										class="inputStyle"> <!-- 출고 부서 -->
+										class="inputStyle" required> <!-- 출고 부서 -->
 								</div>
 							</div>
 							<br>
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
 									<label>물품명</label> <input name="name" type="text"
-										class="inputStyle"> <!-- 물품명 -->
+										class="inputStyle" required> <!-- 물품명 -->
 								</div>
 							</div>
 							<br>
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
 									<label>규격</label> <input name="specifications" type="text"
-										class="inputStyle">
+										class="inputStyle" required>
 								</div>
 							</div>
 							<br>
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
 									<label>수량</label> <input name="quantity" type="text"
-										class="inputStyle">
+										class="inputStyle" required>
 								</div>
 							</div>
 							<br>
@@ -96,6 +96,12 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 								</div>
 							</div>
 							<br>
+							<div class="col-lg-12 col-sm-6 col-12">
+								<div class="form-group">
+									<label>담당자</label> <input id="in_chargeInput" name="in_charge" type="text"
+										class="inputStyle">
+								</div>
+							</div>
 							<div class="col-lg-12 text-center Sans">
 								<button type="submit"
 									class="btn btn-submit fs-5 fw-bolder d-inline-block col-12">출고하기</button>
@@ -108,6 +114,10 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 		</div>
 	</div>
 	</div>
+	<script>
+		let in_chargeValue = document.getElementById("in_charge").innerText;
+		document.getElementById("in_chargeInput").value = in_chargeValue;
+	</script>
 
 
 	<script src="resources/assets/js/jquery-3.6.0.min.js"></script>

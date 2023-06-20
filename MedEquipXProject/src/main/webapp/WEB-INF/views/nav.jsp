@@ -89,11 +89,11 @@
 								<c:choose>
 									<c:when test="${member.getDoctor() eq 'n'}">
 										<h6><%=member.getName()%></h6>
-										<h5>Manager</h5>
+										<h5 id="in_charge">Manager</h5>
 									</c:when>
 									<c:when test="${member.getDoctor() eq 'Y'}">
 										<h6><%=member.getName()%></h6>
-										<h5>Admin</h5>
+										<h5 id="in_charge">Admin</h5>
 									</c:when>
 								</c:choose>
 							</div>

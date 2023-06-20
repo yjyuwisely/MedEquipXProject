@@ -40,6 +40,36 @@
 <!-- Navigation-->
 <jsp:include page="nav.jsp" flush="false" />
 <body>
+<script>
+let in_charge1 = document.getElementById("in_charge").innerHTML;
+let in_charge2 = document.getElementById("in_charge").innerText;
+console.log(in_charge1);
+console.log(in_charge2);
+</script>
+	<c:choose>
+		<c:when test="${not empty upLoadOK}">
+			<script>
+				Swal.fire({
+					position : 'top-end',
+					icon : 'success',
+					title : '${upLoadOK}',
+					showConfirmButton : false,
+					timer : 1300
+				});
+			</script>
+		</c:when>
+		<c:when test="${not empty upLoadFailed}">
+			<script>
+				Swal.fire({
+					position : 'top-end',
+					icon : 'erorr',
+					title : '${upLoadFailed}',
+					showConfirmButton : false,
+					timer : 1300
+				});
+			</script>
+		</c:when>
+	</c:choose>
 	<div id="global-loader">
 		<div class="whirly-loader"></div>
 	</div>

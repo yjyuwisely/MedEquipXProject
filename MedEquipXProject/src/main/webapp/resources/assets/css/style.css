@@ -4851,7 +4851,7 @@ span.select2-container.select2-container--default.select2-container--open
 }
 
 .dataTables_length label:before {
-	content: "Show  per page :";
+	content: "표시 갯수 :";
 	margin-right: 5px
 }
 

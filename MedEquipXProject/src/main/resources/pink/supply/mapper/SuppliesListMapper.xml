@@ -13,7 +13,6 @@ SELECT
 	, change_date
 	, in_charge
 	, stock
-	, turnover_rate
 FROM
 	medical_supplies
 WHERE
@@ -27,6 +26,7 @@ UPDATE
 	medical_supplies 
 SET 
 	stock = stock - #{quantity}
+	, in_charge = #{in_charge}
 	, change_date = default 
 WHERE 
 	name = #{name} 
@@ -77,6 +77,7 @@ UPDATE
 	medical_supplies
 SET
 	stock = stock + #{quantity}
+	, in_charge = #{in_charge}
 	, change_date = default 
 WHERE 
 	name = #{name} 
@@ -97,7 +98,6 @@ SELECT
 	, change_date
 	, in_charge
 	, stock
-	, turnover_rate
 FROM 
  	medical_supplies
 WHERE

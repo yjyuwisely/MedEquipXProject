@@ -10,7 +10,6 @@
 		, change_date
 		, in_charge
 		, stock
-		<!-- , turnover_rate -->
 	FROM
 		medical_supplies
 	WHERE

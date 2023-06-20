@@ -51,45 +51,50 @@
 									<div class="col-lg-12 col-sm-6 col-12">
 										<div class="form-group">
 											<label>물품명</label> <input type="text" name="name"
-												class="inputStyle">
+												class="inputStyle" required>
 										</div>
 									</div>
 									<br>
 									<div class="col-lg-12 col-sm-6 col-12">
 										<div class="form-group">
 											<label>대분류</label> <input type="text" name="category"
-												class="inputStyle">
+												class="inputStyle" required>
 										</div>
 									</div>
 									<br>
 									<div class="col-lg-12 col-sm-6 col-12">
 										<div class="form-group">
 											<label>중분류</label> <input type="text" name="subcategory"
-												class="inputStyle">
+												class="inputStyle" required>
 										</div>
 									</div>
 									<br>
 									<div class="col-lg-12 col-sm-6 col-12">
 										<div class="form-group">
 											<label>규격</label> <input type="text" name="specifications"
-												class="inputStyle">
+												class="inputStyle" required>
 										</div>
 									</div>
 									<br>
 									<div class="col-lg-12 col-sm-6 col-12">
 										<div class="form-group">
 											<label>제조사</label> <input type="text" name="manufacturer"
-												class="inputStyle">
+												class="inputStyle" required>
 										</div>
 									</div>
 									<br>
+									<div class="col-lg-12 col-sm-6 col-12">
+										<div class="form-group">
+											<label>담당자</label> <input id="in_chargeInput"
+												name="in_charge" type="text" class="inputStyle">
+										</div>
+									</div>
 									<div class="col-lg-12 text-center Sans">
 										<button type="submit"
 											class="btn btn-submit fs-5 fw-bolder d-inline-block col-12">
 											물품 등록하기</button>
 									</div>
 								</div>
-
 							</div>
 						</div>
 					</div>
@@ -131,6 +136,10 @@
 		</div>
 		</div>
 	</form>
+	<script>
+		let in_chargeValue = document.getElementById("in_charge").innerText;
+		document.getElementById("in_chargeInput").value = in_chargeValue;
+	</script>
 
 	<script src="resources/assets/js/jquery-3.6.0.min.js"></script>
 

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-/**
+/*
  * Handles requests for the application home page.
  */
 @Controller
@@ -32,5 +32,6 @@ public class HomeController {
 	
 	//프로젝트 대통합, 라이브러리 한글로 바꾸기, null값 insert금지
 	//신규등록 후에 업로드 완료 sweetalert2
+	//작성자 insert 추가
 	
 }
