@@ -54,6 +54,17 @@
 	href="../resources/assets/plugins/fontawesome/css/all.min.css">
 
 <link rel="stylesheet" href="../resources/assets/css/style.css">
+<style>
+.LogoGradient-text {
+  background: -webkit-linear-gradient(45deg, #412fe7, purple, #c73545, #412fe7); 
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 7s ease infinite; /*15s*/
+  text-align: center;
+  font-size: 4rem;
+}
+</style>
 </head>
 <%
 	MemberVO member = (MemberVO) session.getAttribute("member");
@@ -61,12 +72,14 @@
 <!-- Navigation-->
 <div class="main-wrapper">
 	<div class="header">
-		<div class="header-left active">
-			<a href="dashboard" class="logo"> <img
-				src="../resources/assets/img/logo.png" alt="">
-			</a> <a href="index.html" class="logo-small"> <img
-				src="../resources/assets/img/logo-small.png" alt="">
-			</a> <a id="toggle_btn" href="javascript:void(0);"> </a>
+		<div class="header-left active py-0">
+			<a
+				class="logo rint-hide navbar-brand LogoGradient-text Mont fs-5 py-4 px-0 mx-0"
+				href="/dashboard"><span class="logo-text fw-bold"> GREEN
+					HOSPITAL </span></a> <a
+				class="logo-small rint-hide navbar-brand LogoGradient-text Mont fs-1 ps-4"
+				href="/dashboard"><span class="logo-text fw-bolder">G</span></a> </a> <a
+				id="toggle_btn" href="javascript:void(0);"> </a>
 		</div>
 		<a id="mobile_btn" class="mobile_btn" href="#sidebar"> <span
 			class="bar-icon"> <span></span> <span></span> <span></span>
