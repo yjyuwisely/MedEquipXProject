@@ -8,10 +8,6 @@
 	request.setCharacterEncoding("utf-8");
 %>
 <meta charset="utf-8" />
-<!-- <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<meta name="description" content="" />
-<meta name="author" content="" /> -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, user-scalable=0">
 <meta name="description" content="POS - Bootstrap Admin Template">
@@ -74,7 +70,7 @@
 						novalidate>
 						<div class="text-left mb-4">
 							<h1 class="fw-bolder">
-								<span class="d-inline LogoGradient-text fs-1">회원 가입</span>
+								<span class="d-inline LogoGradient-text fs-1">계정 생성</span>
 							</h1>
 						</div>
 						<!-- 1. 이메일 -->
@@ -92,8 +88,6 @@
 								onchange="validatePassword()" />
 							<!-- pattern="^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}" -->
 							<label for="password">비밀번호 (영문 숫자 특수문자 조합, 6자리 이상)</label>
-							<!-- <span
-								style="color: #dc3545; font-size: 0.9rem;" id="msgPassword"></span> -->
 							<div class="valid-feedback">좋아요!</div>
 							<div class="invalid-feedback">영문자, 숫자, 특수기호 조합으로 6자 이상
 								입력하세요.</div>
@@ -105,8 +99,6 @@
 								placeholder="비밀번호 확인" type="password" required
 								onchange="pwVerifiedCheck()" /> <label for="password">비밀번호
 								확인</label>
-							<!-- <div class="valid-feedback">좋아요!</div>
-							<div class="invalid-feedback">비밀번호가 일치하지 않습니다.</div> -->
 							<span style="font-size: 0.9rem;" id="msgPassCk"></span>
 						</div>
 
@@ -121,7 +113,7 @@
 						<!-- Submit Button-->
 						<div class="Sans text-center pt-2 mb-4">
 							<input type="submit" value="가입 완료"
-								class="btn-1 bg-gradient-primary-to-secondary btn btn-primary btn-lg fs-4 fw-bolder d-inline-block col-12">
+								class="btn-1  btn btn-primary btn-lg fs-4 fw-bolder d-inline-block col-12">
 							<c:if test="${not empty errorMessage}">
 								<div role="alert">${errorMessage}</div>
 							</c:if>

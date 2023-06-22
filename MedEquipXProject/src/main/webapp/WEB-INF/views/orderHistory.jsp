@@ -49,19 +49,13 @@
 		<div class="content">
 			<div class="page-header">
 				<div class="page-title">
-					<h4>출고 내역</h4>
+					<h2 class="Sans">출고 내역</h2>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
 					<div class="table-top">
 						<div class="search-set">
-<!-- 							<div class="search-path">
-								<a class="btn btn-filter" id="filter_search"> <img
-									src="resources/assets/img/icons/filter.svg" alt="img"> <span><img
-										src="resources/assets/img/icons/closes.svg" alt="img"></span>
-								</a>
-							</div> -->
 							<div class="search-input">
 								<a class="btn btn-searchset"><img
 									src="resources/assets/img/icons/search-white.svg" alt="img"></a>
@@ -111,9 +105,7 @@
 								<c:forEach items="${historyCall}" var="historyCall">
 									<tr>
 										<td class="productimgname"><a href="javascript:void(0);"
-											class="product-img"> <!-- <img
-												src="resources/assets/img/product/product1.jpg"
-												alt="product"> -->
+											class="product-img"> 
 										</a> <a href="javascript:void(0);">${historyCall.name}</a></td>
 										<td>${historyCall.specifications}</td>
 										<td>${historyCall.department}</td>

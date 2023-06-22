@@ -47,7 +47,7 @@
 		<div class="content">
 			<div class="page-header">
 				<div class="page-title">
-					<h4>사용 중지 물품 리스트</h4>
+					<h2 class="Sans">사용 중지 물품 리스트</h4>
 				</div>
 			</div>
 			<div class="card">
@@ -89,7 +89,6 @@
 											<button type="button" id="toggleButton"
 												onclick="toggleVisibleYes('${usingCall.name}')"
 												class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans">재사용</button>
-											<%-- <td id="Stock_${usingCall.name}">${usingCall.stock}</td> --%>
 										</td>
 									</tr>
 								</c:forEach>
@@ -153,37 +152,5 @@
 	    }
 	}
 	</script>
-<!-- 	<script>
-	console.log("toggleVisibleYes connect");
-	var button = document.getElementById('toggleButton');
-	function toggleVisible(name) { // "name" 필요함
-
-	    var button = document.getElementById('toggleButton');
-
-	    if (button.innerText === '재사용') { //database: N
-
-		// 'DB 연결 할 값이 여기에 있어야 한다'
-		$.ajax({
-		    url : '/itemDetails/' + name + '/toggleVisible', // use a forward slash (/) to separate the parts of the URL.
-		    type : 'POST',
-		    success : function(response) {
-			console.log('Data updated successfully'); // Handle the success response
-			window.location.href = '/stopUsing'; // redirect the user to the desired URL //window.location.href = '/itemDetails/' + name; 
-		    },
-		    error : function(xhr, status, error) {
-			console.log('Error updating data:', error); // Handle the error response
-		    }
-		});
-	    
-		//database: N -> Y
-		// 대문자 Y (Yes)		    //Controller에 전달할 값
-		button.innerText = '사용 중지'; //버튼 문자 변경
-	    } else {
-		// 대문자 N (No) 		    //Controller에 전달할 값
-		button.innerText = '사용중'; //버튼 문자 변경
-	    }
-	}
-    </script> -->
-
 </body>
 </html>

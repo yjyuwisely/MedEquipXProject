@@ -34,18 +34,12 @@
 							<div class="page-header">
 								<div class="page-title">
 									<h4 class="Sans fs-3">물품 상세 정보</h4>
-									<!-- <h6>Full details of a product</h6> -->
 								</div>
 							</div>
-							<!-- <form action="updateVisible" method="post"> -->
 							<form action="/itemDetails/${itemDetails.name}/toggleVisible"
 								method="post">
 								<div class="bar-code-view">
 									<img src="../resources/assets/img/barcode1.png" alt="barcode">
-									<!-- <a
-										class="printimg"> <img src=".resources/assets/img/icons/printer.svg"
-										alt="print">
-									</a> -->
 								</div>
 								<div class="productdetails">
 									<ul class="product-bar">
@@ -93,13 +87,11 @@
 							<div class="page-header">
 								<div class="page-title">
 									<h4 class="Sans fs-3">물품 이미지</h4>
-									<!-- <h6>Full details of a product</h6> -->
 								</div>
 							</div>
 
 							<div class="slider-product-details">
 								<div class="owl-carousel owl-theme">
-									<!-- icon: product-slide -->
 									<div class="slider-product">
 										<img src="../${callImage.atcVo[0].uploadpath}" alt="img">
 										<h4>물품명: ${itemDetails.name}</h4>
@@ -113,8 +105,6 @@
 		</div>
 	</div>
 	</div>
-
-	<!-- <script src="resources/assets/js/jquery-3.6.0.min.js"></script> -->
 
 	<script src="../resources/assets/js/feather.min.js"></script>
 

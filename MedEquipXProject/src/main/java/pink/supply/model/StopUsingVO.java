@@ -6,13 +6,10 @@ public class StopUsingVO {
 	private String specifications;
 	private String manufacturer;
 	private String category;
-	/*private String subcategory;*/
 	private String change_date;
 	private String in_charge;
 	private int stock;
-	/*private double turnover_rate;*/
 	private char visible;
-	/*private int quantity;*/
 	
 	public String getName() {
 		return name;
@@ -38,12 +35,6 @@ public class StopUsingVO {
 	public void setCategory(String category) {
 		this.category = category;
 	}
-	/*public String getSubcategory() {
-		return subcategory;
-	}
-	public void setSubcategory(String subcategory) {
-		this.subcategory = subcategory;
-	}*/
 	public String getChange_date() {
 		return change_date;
 	}
@@ -62,25 +53,12 @@ public class StopUsingVO {
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
-	/*public double getTurnover_rate() {
-		return turnover_rate;
-	}
-	public void setTurnover_rate(double turnover_rate) {
-		this.turnover_rate = turnover_rate;
-	}*/
 	public char getVisible() {
 		return visible;
 	}
 	public void setVisible(char visible) {
 		this.visible = visible;
 	}
-	/*public int getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}*/
-	//", turnover_rate=" + turnover_rate + // ", subcategory=" + subcategory + // + ", quantity=" + quantity + 
 	@Override 
 	public String toString() {
 		return "StopUsingVO [name=" + name + ", specifications=" + specifications + ", manufacturer=" + manufacturer

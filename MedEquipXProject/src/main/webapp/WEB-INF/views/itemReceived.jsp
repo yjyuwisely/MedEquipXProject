@@ -16,23 +16,6 @@
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
 <title>입고 등록</title>
-
-<!-- <link rel="stylesheet" href="resources/assets/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="resources/assets/css/animate.css">
-
-<link rel="stylesheet"
-	href="resources/assets/plugins/select2/css/select2.min.css">
-
-<link rel="stylesheet"
-	href="resources/assets/css/dataTables.bootstrap4.min.css">
-
-<link rel="stylesheet"
-	href="resources/assets/plugins/fontawesome/css/fontawesome.min.css">
-<link rel="stylesheet"
-	href="resources/assets/plugins/fontawesome/css/all.min.css">
-
-<link rel="stylesheet" href="resources/assets/css/style.css"> -->
 <style>
 .inputStyle{
 background-color: #fafafa !important;

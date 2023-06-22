@@ -40,64 +40,66 @@
 <!-- Navigation-->
 <jsp:include page="nav.jsp" flush="false" />
 <body>
-<script>
-let in_charge1 = document.getElementById("in_charge").innerHTML;
-let in_charge2 = document.getElementById("in_charge").innerText;
-console.log(in_charge1);
-console.log(in_charge2);
-</script>
+	<script>
+	let in_charge1 = document.getElementById("in_charge").innerHTML;
+	let in_charge2 = document.getElementById("in_charge").innerText;
+	console.log(in_charge1);
+	console.log(in_charge2);
+    </script>
 	<c:choose>
 		<c:when test="${not empty upLoadOK}">
 			<script>
-				Swal.fire({
-					position : 'top-end',
-					icon : 'success',
-					title : '${upLoadOK}',
-					showConfirmButton : false,
-					timer : 1300
-				});
-			</script>
+		Swal.fire({
+		    position : 'top-end',
+		    icon : 'success',
+		    title : '${upLoadOK}',
+		    showConfirmButton : false,
+		    timer : 1300
+		});
+	    </script>
 		</c:when>
 		<c:when test="${not empty upLoadFailed}">
 			<script>
-				Swal.fire({
-					position : 'top-end',
-					icon : 'erorr',
-					title : '${upLoadFailed}',
-					showConfirmButton : false,
-					timer : 1300
-				});
-			</script>
+		Swal.fire({
+		    position : 'top-end',
+		    icon : 'erorr',
+		    title : '${upLoadFailed}',
+		    showConfirmButton : false,
+		    timer : 1300
+		});
+	    </script>
 		</c:when>
 	</c:choose>
 	<div id="global-loader">
 		<div class="whirly-loader"></div>
 	</div>
-	<div class="page-wrapper">
+	<div class="page-wrapper mt-0">
 		<div class="content">
 			<div class="page-header">
 				<div class="page-title">
-					<h4>전체 물품 리스트</h4>
+					<h2 class="Sans">전체 물품 리스트</h2>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<div class="table-top">
-						<div class="text-danger fw-bold fs-4 Sans">
+					<div class="table-top mb-1">
+						<div class="text-danger fw-bold fs-5 mb-2 Sans">
+							<img src="../resources/assets/img/icons/alarm3.jpg" alt="img">
 							<c:choose>
 								<c:when test="${not empty alertName && not empty alertStock}">
-							이상 항목: ${alertName}, 수량: ${alertStock}, 부족분 : ${required}
-						</c:when>
+									
+				이상 항목: ${alertName}, 수량: ${alertStock}, 부족분: ${required}
+			</c:when>
 								<c:when test="${not empty OKmsg}">
-							${OKmsg}
-						</c:when>
+				${OKmsg}
+			</c:when>
 							</c:choose>
 						</div>
- 
 						<div class="search-set">
 							<div class="search-input">
-								<a class="btn btn-searchset"><img
-									src="../resources/assets/img/icons/search-white.svg" alt="img"></a>
+								<a class="btn btn-searchset"> <img
+									src="../resources/assets/img/icons/search-white.svg" alt="img">
+								</a>
 							</div>
 						</div>
 					</div>
@@ -106,7 +108,7 @@ console.log(in_charge2);
 						<form action="dashboard" method="get">
 							<!-- btn btn-submit -->
 							<!-- 원래 영어 단어: syringe catheter 3way non-drug painkillers Nonsteroidal Painkillers digestive organs Brain improvement Nervous Sanctions Allergic inhibitors electrolyte solution -->
-							<span class="fw-bold">분류 : </span>
+							<span class="fw-bold fs-6 Sans">분류: </span>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory" value="syringe">주사(${subMap.get("syringe")})</button>
@@ -123,10 +125,12 @@ console.log(in_charge2);
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory"
-								value="Nonsteroidal Painkillers">비스테로이드성 진통제(${subMap.get("Nonsteroidal Painkillers")})</button>
+								value="Nonsteroidal Painkillers">비스테로이드성
+								진통제(${subMap.get("Nonsteroidal Painkillers")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
-								type="submit" name="subcategory" value="digestive organs">소화기관 작용제(${subMap.get("digestive organs")})</button>
+								type="submit" name="subcategory" value="digestive organs">소화기관
+								작용제(${subMap.get("digestive organs")})</button>
 							<button
 								class="border border-1 rounded border-0 fs-6 fw-bolder d-inline-block Sans"
 								type="submit" name="subcategory" value="Brain improvement">뇌
@@ -213,9 +217,5 @@ console.log(in_charge2);
 	<script src="resources/assets/js/script.js"></script>
 
 	<script src="resources/js/stockAlert.js"></script>
-	<!-- 	<script src="resources/js/changeColor.js"></script> -->
-
 </body>
-
-
 </html>

@@ -109,7 +109,6 @@
 								</div>
 								<div class="slider-product-details">
 									<div class="owl-carousel owl-theme">
-										<!-- icon: product-slide -->
 										<div class="slider-product">
 											<div class="col-lg-12">
 												<div class="form-group">
