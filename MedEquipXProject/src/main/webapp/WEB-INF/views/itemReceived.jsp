@@ -50,11 +50,12 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 <div
 			class="page-wrapper d-flex align-items-start justify-content-center">
 			<div class="content">
-
 				<div class="row justify-content-center">
 					<div class="col-lg-6 card shadow rounded-4 border-0">
 						<div class="card-body">
+						<form action="itemReceived" method="Post">
 							<div class="row">
+							
 								<div class="page-header">
 									<div class="page-title text-center">
 										<h3 class="Sans fs-3">입고 등록</h3>
@@ -68,7 +69,7 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 							</div>
 							<div class="col-lg-12 col-sm-6 col-12">
 								<div class="form-group">
-									<label>분류</label> <input id="specifications" name="category" type="text"
+									<label>분류</label> <input id="category" name="category" type="text"
 										class="inputStyle">
 								</div>
 							</div>
@@ -87,18 +88,28 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 								</div>
 							</div>
 							<br>
-							<div class="col-lg-12 text-center Sans">
+							<div class="col-lg-12 col-sm-6 col-12">
+								<div class="form-group">
+									<label>담당자</label> <input id="in_chargeInput" name="in_charge"
+										type="text" class="inputStyle">
+								</div>
+							</div>
+								<div class="col-lg-12 text-center Sans">
 								<button type="submit"
 									class="btn btn-submit fs-5 fw-bolder d-inline-block col-12 ">등록하기</button>
 							</div>
-							</form>
+							
 						</div>
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	</div>
+	<script>
+		let in_chargeValue = document.getElementById("in_charge").innerText;
+		document.getElementById("in_chargeInput").value = in_chargeValue;
+	</script>
 
 
 	<script src="resources/assets/js/jquery-3.6.0.min.js"></script>

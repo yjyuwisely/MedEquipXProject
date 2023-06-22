@@ -3,8 +3,8 @@
 
 <mapper namespace="pink.supply.mapper.itemReceivedMapper">
 <update id="callitemReceivedList" parameterType="pink.supply.model.SuppliesListVO">
-update medical_supplies set stock= stock+ #{quantity}, change_date=default
-where name = #{name} and specifications = #{specifications} and visible='Y'
+update medical_supplies set stock= stock+ #{quantity}, change_date=default, in_charge=#{in_charge}
+where name = #{name} and category = #{category} and visible='Y'
  </update>
 </mapper>
 

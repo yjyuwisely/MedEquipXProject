@@ -6,6 +6,7 @@ public class ReleasedVO {
 	private String name;
 	private String specifications;
 	private String change_date;
+	private String in_charge;
 	private int quantity;
 	private String memo;
 	
@@ -50,10 +51,17 @@ public class ReleasedVO {
 		this.memo = memo;
 	}
 	
+	public String getIn_charge() {
+		return in_charge;
+	}
+	public void setIn_charge(String in_charge) {
+		this.in_charge = in_charge;
+	}
 	@Override
 	public String toString() {
 		return "ReleasedVO [department=" + department + ", name=" + name + ", specifications=" + specifications
-				+ ", change_date=" + change_date + ", quantity=" + quantity + ", memo=" + memo + "]";
+				+ ", change_date=" + change_date + ", in_charge=" + in_charge + ", quantity=" + quantity + ", memo="
+				+ memo + "]";
 	}
 	
 	

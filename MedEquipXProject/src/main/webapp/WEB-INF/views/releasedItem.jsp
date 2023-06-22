@@ -113,7 +113,6 @@ box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
 			</div>
 		</div>
 	</div>
-	</div>
 	<script>
 		let in_chargeValue = document.getElementById("in_charge").innerText;
 		document.getElementById("in_chargeInput").value = in_chargeValue;
