@@ -29,7 +29,11 @@ SET
 	, in_charge = #{in_charge}
 	, change_date = default 
 WHERE 
-	name = #{name} 
+	name = #{name}
+AND
+	<![CDATA[
+	stock- #{quantity} > 0
+	]]>
 AND 
 	specifications = #{specifications}
 AND 
@@ -45,6 +49,7 @@ INSERT INTO
 	, specifications
 	, quantity
 	, change_date
+	, in_charge
 	, memo
 	)
 VALUES
@@ -54,6 +59,7 @@ VALUES
 	, #{specifications}
 	, #{quantity}
 	, default
+	, #{in_charge}
 	, #{memo}
 	)
 </insert>

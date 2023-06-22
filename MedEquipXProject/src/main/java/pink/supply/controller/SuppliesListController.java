@@ -92,16 +92,17 @@ public class SuppliesListController {
 	@PostMapping("releasedItem")
 	public String ForwardingDept(SuppliesListVO supList, ReleasedVO relList) {
 		supplyServ.ForwardingDept(supList, relList);
+		logger.info("call supList getStock data is ={}", supList.getStock());
 		logger.info("call update data is ={}", supList);
 		logger.info("call update data is ={}", relList);
 		return "redirect:/dashboard";
 		
 	}
 	
-//	@GetMapping("itemReceived")
-//	public String itemReceivedPage() {
-//		return "itemReceived";
-//	}
+	@GetMapping("itemReceived")
+	public String itemReceivedPage() {
+		return "itemReceived";
+	}
 	
 	@GetMapping(value = "itemReceived", params = "name")
 	public String callDatasByQR(@RequestParam("name") String name, Model model) {
